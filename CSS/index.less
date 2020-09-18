@@ -24,10 +24,12 @@ li {
         margin: 0 auto;
         // 父相
         position: relative;
+        overflow: hidden;
 
         // 轮播ul
         ul {
-            width: 6000px;
+            width: 7000px;
+            position: absolute;
 
             li {
                 float: left;
@@ -48,23 +50,28 @@ li {
             font-size: 20px;
             font-weight: 700;
             color: #ffffff;
-            .arrow_left{
+            display: none;
+
+            .arrow_left {
                 position: absolute;
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
                 width: 30px;
-            height: 50px;
-            background-color: rgba(0, 0, 0, 0.5);
+                height: 50px;
+                background-color: rgba(0, 0, 0, 0.5);
+                cursor: pointer;
             }
-            .arrow_right{
+
+            .arrow_right {
                 position: absolute;
                 right: 0;
                 top: 50%;
                 transform: translateY(-50%);
                 width: 30px;
-            height: 50px;
-            background-color: rgba(0, 0, 0, 0.5);
+                height: 50px;
+                background-color: rgba(0, 0, 0, 0.5);
+                cursor: pointer;
             }
         }
     }
