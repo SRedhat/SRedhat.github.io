@@ -64,9 +64,35 @@ window.onload = function () {
             });
         }
     }
-    // 3.无线轮播实现
+    // 3.无限+自动轮播实现
     // 复制第一个图片 插入到最后面
     let liNew = lis[0].cloneNode(true);
-    ul.appendChild(liNew)
+    ul.appendChild(liNew);
+
+    setInterval(() => arrow_right.onclick(), 3000)
+
+
+
+    /* 毕业倒计时：12月15号 */
+    let lastTime = "2020-12-15";
+    let getTimer = () => {
+        let timeDate = new Date(lastTime);
+        let now = new Date();
+        let date = timeDate.getTime() - now.getTime();
+        let day = Math.floor(date / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(date / 1000 / 60 / 60 % 24);
+        let Minutes = Math.floor(date / 1000 / 60 % 60);
+        let Seconds = Math.floor(date / 1000 % 60);
+        // console.log(day, hours, Minutes, Seconds);
+
+        document.querySelector('.timer_title>span').innerHTML = lastTime;
+        document.querySelector('.day>span').innerHTML = day;
+        document.querySelector('.hours>span').innerHTML = hours;
+        document.querySelector('.Minutes>span').innerHTML = Minutes;
+        document.querySelector('.Seconds>span').innerHTML = Seconds;
+    }
+    getTimer();
+    setInterval(getTimer, 1000);
+
 
 }

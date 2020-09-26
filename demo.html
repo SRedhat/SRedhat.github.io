@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script Language="JavaScript">
+        // Begin 
+        let timeDate = new Date("2020-12-15");
+        let times = "培训毕业";
+        let now = new Date();
+        let date = timeDate.getTime() - now.getTime();
+        let day = Math.floor(date / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(date / 1000 / 60 / 60 % 24);
+        let Minutes = Math.floor(date / 1000 / 60 % 60);
+        let Seconds = Math.floor(date / 1000 % 60 );
+        console.log(day,hours,Minutes,Seconds);
+        // End
+    </Script>
+</body>
+
+</html>
